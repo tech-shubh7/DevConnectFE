@@ -27,7 +27,7 @@ const Conncections = () => {
 
     if(!connections) return;
   return (
-    <div className=' text-center my-10 min-h-screen bg-base-100 '>
+    <div className=' text-center my-10 min-h-screen bg-base-100 pb-20'>
       <h1 className='font-bold text-2xl text-primary'>Connections</h1>
       {connections.length==0 && 
       <div className='font-semibold text-2xl text-purple-500 my-5'>No Connections found!!</div>}
