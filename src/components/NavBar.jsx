@@ -54,8 +54,9 @@ const NavBar = () => {
               tabIndex={0}
               className="btn btn-ghost flex items-center gap-3 normal-case"
             >
-              <span className="text-base font-medium text-primary whitespace-nowrap">
-                Welcome, {user.firstName}
+              <span className="flex text-base font-medium text-primary whitespace-nowrap gap-1">
+               <h2> Welcome,</h2> 
+                <h2 className=' text-sky-100 font-semibold '> {user.firstName} </h2>
               </span>
               <div className="avatar">
                 <div className="w-10 rounded-full">
@@ -79,7 +80,7 @@ const NavBar = () => {
                   <span className="badge">New</span>
                 </Link>
               </li>
-              <li><Link>Settings</Link></li>
+              <li><Link to="/connections">Conncetions</Link></li>
               <li><Link onClick={handleLogout}>Logout</Link></li>
             </ul>
           </div>
