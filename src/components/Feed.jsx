@@ -21,13 +21,25 @@
   }
   }
 
+  
+
   useEffect(()=>{
     getFeed();
   },[])
 
+  if(!feed) return;
+
+  if(feed.length===0) {
+    return (
+      <div className='flex justify-center my-10 sm:my-7'>
+        <div className='text-xl text-red-500'>No users found in the feed!</div>
+      </div>
+    );
+  }
+
     return (
     feed && (
-      <div className='flex justify-center my-10 sm:my-7'>
+      <div className='flex justify-center my-10 pb-40 bg-base-100 sm:my-7'>
         <UserCard user={feed[0]} />
       </div>
     )

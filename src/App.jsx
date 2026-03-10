@@ -8,6 +8,8 @@ import appStore from './utils/appStore';
 import Feed from './components/Feed';
 import Conncections from './components/Conncections';
 import Requests from './components/Requests';
+import Chat from './components/Chat';
+import SendOtp from './components/sendotp';
 
 function App() {
  
@@ -23,6 +25,9 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/connections" element={<Conncections />} />
           <Route path="/requests" element={<Requests/>} />
+          <Route path="/chat" element={<Chat/>} />
+          <Route path="/chat/:targetUserId" element={<Chat/>} />
+          <Route path="/otp" element={<SendOtp/>} />
       </Route>
         </Routes>
      </div>
